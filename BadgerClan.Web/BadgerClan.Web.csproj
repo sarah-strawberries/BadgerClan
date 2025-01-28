@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BadgerClan.Logic\BadgerClan.Logic.csproj" />
-  </ItemGroup>
+  </ItemGroup>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>

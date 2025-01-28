@@ -1,3 +1,5 @@
+using BadgerClan.Logic;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +15,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapPost("/", (MoveRequest request) => return new MoveResponse(new List<Move>() ));
 
 var summaries = new[]
 {
