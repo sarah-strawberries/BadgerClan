@@ -16,10 +16,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-List<Move> moves = new();
-MoveResponse response = new MoveResponse(moves);
 
-app.MapPost("/", (MoveRequest request) => return response);
+app.MapPost("/", (MoveRequest request) => {
+    List<Move> moves = new();
+    MoveResponse response = new MoveResponse(moves);
+    return response;
+});
 
 var summaries = new[]
 {
