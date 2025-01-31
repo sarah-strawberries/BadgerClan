@@ -10,8 +10,6 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
-
 // Endpoint for sending a MoveRequest to BadgerClan
 app.MapPost("/", (MoveRequest request) => {
     List<Move> moves = new();
