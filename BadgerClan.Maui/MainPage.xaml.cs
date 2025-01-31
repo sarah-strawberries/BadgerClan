@@ -3,23 +3,35 @@ namespace BadgerClan.Maui;
 
 public partial class MainPage : ContentPage
 {
-    int count = 0;
-
     public MainPage()
     {
         InitializeComponent();
         BindingContext = new MainPageViewModel(new HttpClient());
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+
+    private void MoveLeftButton_Clicked(object sender, EventArgs e)
     {
-        count++;
 
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
+    }
 
-        SemanticScreenReader.Announce(CounterBtn.Text);
+    private void MoveUpLeftButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void MoveUpLeftButton_Clicked_1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void MoveUpRightButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void MoveRightButton_Clicked(object sender, EventArgs e)
+    {
+
     }
 }
