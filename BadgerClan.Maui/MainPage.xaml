@@ -30,7 +30,8 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Clicked="MoveLeftButton_Clicked"
-                HorizontalOptions="Fill" >
+                VerticalOptions="Center"
+                HorizontalOptions="Center" >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
@@ -58,7 +59,8 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Clicked="MoveUpLeftButton_Clicked"
-                HorizontalOptions="Fill" >
+                VerticalOptions="Center"
+                HorizontalOptions="Center" >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
@@ -86,7 +88,8 @@
                 Grid.Row="0"
                 Grid.Column="2"
                 Clicked="MoveUpRightButton_Clicked"
-                HorizontalOptions="Fill" >
+                VerticalOptions="Center"
+                HorizontalOptions="Center" >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
@@ -114,7 +117,8 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 Clicked="MoveRightButton_Clicked"
-                HorizontalOptions="Fill" >
+                VerticalOptions="Center"
+                HorizontalOptions="Center" >
                     <VisualStateManager.VisualStateGroups>
                         <VisualStateGroupList>
                             <VisualStateGroup x:Name="CommonStates">
