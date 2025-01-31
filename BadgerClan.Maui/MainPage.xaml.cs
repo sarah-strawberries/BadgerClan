@@ -3,45 +3,43 @@ namespace BadgerClan.Maui;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
+    //HttpClient client;
+
+    public MainPage(/*HttpClient client*/)
     {
         InitializeComponent();
         BindingContext = new MainPageViewModel(new HttpClient());
+        //this.client = client;
     }
 
 
     private void MoveLeftButton_Clicked(object sender, EventArgs e)
     {
-
+        //client.PostAsync("MoveLeft", null);
     }
 
     private void MoveUpLeftButton_Clicked(object sender, EventArgs e)
     {
-
-    }
-
-    private void MoveUpLeftButton_Clicked_1(object sender, EventArgs e)
-    {
-
+        //client.PostAsync("MoveUpLeft", null);
     }
 
     private void MoveUpRightButton_Clicked(object sender, EventArgs e)
     {
-
+        //client.PostAsync("MoveUpRight", null);
     }
 
     private void MoveRightButton_Clicked(object sender, EventArgs e)
     {
-
-    }
-
-    private void MoveDownRightButton_Clicked(object sender, EventArgs e)
-    {
-
+        //client.PostAsync("MoveRight", null);
     }
 
     private void MoveDownLeft_Clicked(object sender, EventArgs e)
     {
+        //client.PostAsync("MoveDownLeft", null);
+    }
 
+    private void MoveDownRightButton_Clicked(object sender, EventArgs e)
+    {
+        //client.PostAsync("MoveDownRight", null);
     }
 }
