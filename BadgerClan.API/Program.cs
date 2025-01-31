@@ -11,11 +11,12 @@ if (app.Environment.IsDevelopment())
 }
 
 // Endpoint for sending a MoveRequest to BadgerClan
-app.MapPost("/", (MoveRequest request) => {
+app.MapPost("/MoveLeft", (MoveRequest request) =>
+{
     List<Move> moves = new();
+    //moves.Add(new Move(MoveType.Walk,,))
     MoveResponse response = new MoveResponse(moves);
     return response;
-})
-.WithName("SendMoveRequest");
+});
 
 app.Run();

@@ -4,3 +4,10 @@ GET {{BadgerClan.API_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+POST {{BadgerClan.API_HostAddress}}/SendMoveRequest/
+Accept: application/json
+{
+
+}
+###
