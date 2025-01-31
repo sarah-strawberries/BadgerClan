@@ -26,6 +26,7 @@
                     <ColumnDefinition Width="150"/>
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
+                
                 <Button
                 x:Name="MoveLeftButton"
                 Text="Move Left" 
@@ -123,6 +124,66 @@
                 Grid.Column="3"
                 Margin="8"
                 Clicked="MoveRightButton_Clicked"
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                                Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                                Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver" />
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+
+                <Button
+                x:Name="MoveDownLeft"
+                Text="Move Down/Left" 
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="8"
+                Clicked="MoveDownLeft_Clicked"
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                                Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                                Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="PointerOver" />
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                
+                <Button
+                x:Name="MoveDownRightButton"
+                Text="Move Down/Right" 
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="8"
+                Clicked="MoveDownRightButton_Clicked"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>

@@ -34,4 +34,14 @@ public partial class MainPage : ContentPage
     {
 
     }
+
+    private void MoveDownRightButton_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void MoveDownLeft_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
