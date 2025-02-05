@@ -14,9 +14,5 @@ namespace BadgerClan.Maui.ViewModels
             this.client = client;
         }
 
-        public async Task GoLeft()
-        {
-            await client.GetAsync("http://localhost:port/change/direction");
-        }
     }
 }
