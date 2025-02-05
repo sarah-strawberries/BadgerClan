@@ -3,43 +3,72 @@ namespace BadgerClan.Maui;
 
 public partial class MainPage : ContentPage
 {
-    //HttpClient client;
+    HttpClient client;
 
-    public MainPage(/*HttpClient client*/)
+    public MainPage()
     {
         InitializeComponent();
-        BindingContext = new MainPageViewModel(new HttpClient());
-        //this.client = client;
+        client = new HttpClient();
+        BindingContext = new MainPageViewModel(client);
     }
 
-
-    private void MoveLeftButton_Clicked(object sender, EventArgs e)
+    private async void MoveLeftButton_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveLeft", null);
+        await MoveLeft();
     }
 
-    private void MoveUpLeftButton_Clicked(object sender, EventArgs e)
+    private async void MoveUpLeftButton_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveUpLeft", null);
+        await MoveUpLeft();
     }
 
-    private void MoveUpRightButton_Clicked(object sender, EventArgs e)
+    private async void MoveUpRightButton_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveUpRight", null);
+        await MoveUpRight();
     }
 
-    private void MoveRightButton_Clicked(object sender, EventArgs e)
+    private async void MoveRightButton_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveRight", null);
+        await MoveUpRight();
     }
 
-    private void MoveDownLeft_Clicked(object sender, EventArgs e)
+    private async void MoveDownLeft_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveDownLeft", null);
+        await MoveUpRight();
     }
 
-    private void MoveDownRightButton_Clicked(object sender, EventArgs e)
+    private async void MoveDownRightButton_Clicked(object sender, EventArgs e)
     {
-        //client.PostAsync("MoveDownRight", null);
+        await MoveDownRight();
+    }
+
+    public async Task MoveLeft()
+    {
+        await client.PostAsync("MoveLeft", null);
+    }
+
+    public async Task MoveUpLeft()
+    {
+        await client.PostAsync("MoveUpLeft", null);
+    }
+
+    public async Task MoveRight()
+    {
+        await client.PostAsync("MoveRight", null);
+    }
+
+    public async Task MoveUpRight()
+    {
+        await client.PostAsync("MoveUpRight", null);
+    }
+
+    public async Task MoveDownLeft()
+    {
+        await client.PostAsync("MoveDownLeft", null);
+    }
+
+    public async Task MoveDownRight()
+    {
+        await client.PostAsync("MoveDownRight", null);
     }
 }
