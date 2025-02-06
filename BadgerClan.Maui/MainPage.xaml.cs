@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
         BindingContext = new MainPageViewModel(client);
     }
 
+    #region Event Handlers
     private async void MoveLeftButton_Clicked(object sender, EventArgs e)
     {
         await MoveLeft();
@@ -42,7 +43,9 @@ public partial class MainPage : ContentPage
     {
         await MoveDownRight();
     }
+    #endregion
 
+    #region Methods
     public async Task MoveLeft()
     {
         await client.PostAsync("MoveLeft", null);
@@ -72,4 +75,5 @@ public partial class MainPage : ContentPage
     {
         await client.PostAsync("MoveDownRight", null);
     }
+    #endregion
 }
