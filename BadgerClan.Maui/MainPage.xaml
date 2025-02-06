@@ -148,7 +148,7 @@
                 </Button>
 
                 <Button
-                x:Name="MoveDownLeft"
+                x:Name="MoveDownLeftButton"
                 Text="Move Down/Left" 
                 Grid.Row="2"
                 Grid.Column="1"

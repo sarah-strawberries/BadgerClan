@@ -31,12 +31,12 @@ public partial class MainPage : ContentPage
 
     private async void MoveRightButton_Clicked(object sender, EventArgs e)
     {
-        await MoveUpRight();
+        await MoveRight();
     }
 
     private async void MoveDownLeft_Clicked(object sender, EventArgs e)
     {
-        await MoveUpRight();
+        await MoveDownLeft();
     }
 
     private async void MoveDownRightButton_Clicked(object sender, EventArgs e)
