@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+//using CommunityToolkit.Maui;
+using CommunityToolkit.Mvvm.Input;
 
 namespace BadgerClan.Maui.ViewModels
 {
@@ -21,41 +23,40 @@ namespace BadgerClan.Maui.ViewModels
         {
             this.client = client;
 
-            MoveLeftCommand = new Command(MoveLeft);
-            MoveUpLeftCommand = new Command(MoveUpLeft);
-            MoveDownLeftCommand = new Command(MoveDownLeft);
-            MoveRightCommand = new Command(MoveRight);
-            MoveUpRightCommand = new Command(MoveUpRight);
-            MoveDownRightCommand = new Command(MoveDownRight);
+            //MoveLeftCommand = new AsyncCommand(MoveLeft);
+            //MoveUpLeftCommand = new AsyncCommand(MoveUpLeft);
+            //MoveDownLeftCommand = new AsyncCommand(MoveDownLeft);
+            //MoveRightCommand = new AsyncCommand(MoveRight);
+            //MoveUpRightCommand = new AsyncCommand(MoveUpRight);
+            //MoveDownRightCommand = new AsyncCommand(MoveDownRight);
         }
 
         // Command methods
 
-        public void MoveLeft()
+        [RelayCommand]
+        public async Task MoveLeft()
         {
-
-        }        
-        public void MoveUpLeft()
-        {
-
-        }        
-        public void MoveDownLeft()
-        {
-
-        }        
-        public void MoveRight()
-        {
-
-        }        
-        public void MoveUpRight()
-        {
-
-        }        
-        public void MoveDownRight()
-        {
-
+            await client.PostAsync("MoveLeft", null);
         }
-        
-
+        public async Task MoveUpLeft()
+        {
+            await client.PostAsync("MoveUpLeft", null);
+        }
+        public async Task MoveDownLeft()
+        {
+            await client.PostAsync("MoveRight", null);
+        }
+        public async Task MoveRight()
+        {
+            await client.PostAsync("MoveUpRight", null);
+        }
+        public async Task MoveUpRight()
+        {
+            await client.PostAsync("MoveDownLeft", null);
+        }
+        public async Task MoveDownRight()
+        {
+            await client.PostAsync("MoveDownRight", null);
+        }
     }
 }
