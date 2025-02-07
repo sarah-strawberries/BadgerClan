@@ -63,7 +63,7 @@
                 Grid.Row="0"
                 Grid.Column="1"
                 Margin="8"
-                Clicked="MoveUpLeftButton_Clicked"
+                Command="{Binding MoveUpLeftCommand}"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>
@@ -93,7 +93,7 @@
                 Grid.Row="0"
                 Grid.Column="2"
                 Margin="8"
-                Clicked="MoveUpRightButton_Clicked"
+                Command="{Binding MoveUpRightCommand}"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>
@@ -123,7 +123,7 @@
                 Grid.Row="1"
                 Grid.Column="3"
                 Margin="8"
-                Clicked="MoveRightButton_Clicked"
+                Command="{Binding MoveRightCommand}"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>
@@ -153,7 +153,7 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 Margin="8"
-                Clicked="MoveDownLeft_Clicked"
+                Command="{Binding MoveDownLeftCommand}"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>
@@ -183,7 +183,7 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Margin="8"
-                Clicked="MoveDownRightButton_Clicked"
+                Command="{Binding MoveDownRightCommand}"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" >
                     <VisualStateManager.VisualStateGroups>
