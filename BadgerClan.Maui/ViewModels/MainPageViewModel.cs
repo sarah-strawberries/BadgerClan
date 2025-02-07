@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
-//using CommunityToolkit.Maui;
 using CommunityToolkit.Mvvm.Input;
 
 namespace BadgerClan.Maui.ViewModels
