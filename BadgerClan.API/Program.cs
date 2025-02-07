@@ -10,13 +10,10 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// Endpoint for sending a MoveRequest to BadgerClan
-app.MapPost("/MoveLeft", (MoveRequest request) =>
+// Endpoints for sending MoveRequests to BadgerClan
+app.MapGet("/MoveLeft", () =>
 {
-    // This stuff is not going to be here eventually
-    List<Move> moves = new();
-    MoveResponse response = new MoveResponse(moves);
-    return response;
+    return Results.Ok();
 });
 
 app.Run();
