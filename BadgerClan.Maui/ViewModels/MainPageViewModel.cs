@@ -13,22 +13,22 @@ namespace BadgerClan.Maui.ViewModels
     public partial class MainPageViewModel : ObservableObject
     {
         HttpClient client;
-        public ICommand MoveLeftCommand { get; }
-        public ICommand MoveUpLeftCommand { get; }
-        public ICommand MoveDownLeftCommand { get; }
-        public ICommand MoveRightCommand { get; }
-        public ICommand MoveUpRightCommand { get; }
-        public ICommand MoveDownRightCommand { get; }
+        public IAsyncRelayCommand MoveLeftCommand { get; }
+        public IAsyncRelayCommand MoveUpLeftCommand { get; }
+        public IAsyncRelayCommand MoveDownLeftCommand { get; }
+        public IAsyncRelayCommand MoveRightCommand { get; }
+        public IAsyncRelayCommand MoveUpRightCommand { get; }
+        public IAsyncRelayCommand MoveDownRightCommand { get; }
         public MainPageViewModel(HttpClient client)
         {
             this.client = client;
 
-            //MoveLeftCommand = new AsyncCommand(MoveLeft);
-            //MoveUpLeftCommand = new AsyncCommand(MoveUpLeft);
-            //MoveDownLeftCommand = new AsyncCommand(MoveDownLeft);
-            //MoveRightCommand = new AsyncCommand(MoveRight);
-            //MoveUpRightCommand = new AsyncCommand(MoveUpRight);
-            //MoveDownRightCommand = new AsyncCommand(MoveDownRight);
+            MoveLeftCommand = new AsyncRelayCommand(MoveLeft);
+            MoveUpLeftCommand = new AsyncRelayCommand(MoveUpLeft);
+            MoveDownLeftCommand = new AsyncRelayCommand(MoveDownLeft);
+            MoveRightCommand = new AsyncRelayCommand(MoveRight);
+            MoveUpRightCommand = new AsyncRelayCommand(MoveUpRight);
+            MoveDownRightCommand = new AsyncRelayCommand(MoveDownRight);
         }
 
         // Command methods
