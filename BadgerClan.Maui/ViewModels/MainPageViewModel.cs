@@ -13,7 +13,7 @@ namespace BadgerClan.Maui.ViewModels
     public partial class MainPageViewModel : ObservableObject
     {
         HttpClient client;
-        public IAsyncRelayCommand MoveLeftCommand { get; }
+        public IAsyncRelayCommand MoveLeftCommand1 { get; }
         public IAsyncRelayCommand MoveUpLeftCommand { get; }
         public IAsyncRelayCommand MoveDownLeftCommand { get; }
         public IAsyncRelayCommand MoveRightCommand { get; }
@@ -23,7 +23,7 @@ namespace BadgerClan.Maui.ViewModels
         {
             this.client = client;
 
-            MoveLeftCommand = new AsyncRelayCommand(MoveLeft);
+            MoveLeftCommand1 = new AsyncRelayCommand(MoveLeft);
             MoveUpLeftCommand = new AsyncRelayCommand(MoveUpLeft);
             MoveDownLeftCommand = new AsyncRelayCommand(MoveDownLeft);
             MoveRightCommand = new AsyncRelayCommand(MoveRight);
