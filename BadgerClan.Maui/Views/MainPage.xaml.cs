@@ -14,10 +14,10 @@ public partial class MainPage : ContentPage
     }
 
     #region Event Handlers
-    private async void MoveLeftButton_Clicked(object sender, EventArgs e)
-    {
-        await MoveLeft();
-    }
+    //private async void MoveLeftButton_Clicked(object sender, EventArgs e)
+    //{
+    //    await MoveLeft();
+    //}
 
     private async void MoveUpLeftButton_Clicked(object sender, EventArgs e)
     {
