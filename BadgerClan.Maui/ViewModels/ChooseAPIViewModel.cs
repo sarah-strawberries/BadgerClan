@@ -7,13 +7,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace BadgerClan.Maui.ViewModels
 {
-    public partial class MainPageViewModel : ObservableObject
+    public partial class ChooseAPIViewModel : ObservableObject
     {
-        HttpClient client;
-        public MainPageViewModel(HttpClient client)
-        {
-            this.client = client;
-        }
 
     }
 }
