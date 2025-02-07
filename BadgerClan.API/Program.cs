@@ -16,4 +16,28 @@ app.MapGet("/MoveLeft", () =>
     return Results.Ok();
 });
 
-app.Run();
+app.MapGet("/MoveUpLeft", () =>
+{
+    return Results.Ok();
+});
+
+app.MapGet("/MoveDownLeft", () =>
+{
+    return Results.Ok();
+});
+
+app.MapGet("/MoveRight", () =>
+{
+    return Results.Ok();
+});
+
+app.MapGet("/MoveUpRight", () =>
+{
+    return Results.Ok();
+});
+
+app.MapGet("/MoveDownRight", () =>
+{
+    return Results.Ok();
+});
+
