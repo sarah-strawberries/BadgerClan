@@ -36,27 +36,27 @@ namespace BadgerClan.Maui.ViewModels
         [RelayCommand]
         public async Task MoveLeft()
         {
-            await client.PostAsync("MoveLeft", null);
+            await client.GetAsync("MoveLeft");
         }
         public async Task MoveUpLeft()
         {
-            await client.PostAsync("MoveUpLeft", null);
+            await client.GetAsync("MoveUpLeft");
         }
         public async Task MoveDownLeft()
         {
-            await client.PostAsync("MoveRight", null);
+            await client.GetAsync("MoveRight");
         }
         public async Task MoveRight()
         {
-            await client.PostAsync("MoveUpRight", null);
+            await client.GetAsync("MoveUpRight");
         }
         public async Task MoveUpRight()
         {
-            await client.PostAsync("MoveDownLeft", null);
+            await client.GetAsync("MoveDownLeft");
         }
         public async Task MoveDownRight()
         {
-            await client.PostAsync("MoveDownRight", null);
+            await client.GetAsync("MoveDownRight");
         }
     }
 }
