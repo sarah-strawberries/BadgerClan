@@ -1,4 +1,6 @@
 using BadgerClan.Logic;
+using BadgerClan.Logic.Bot;
+using Microsoft.AspNetCore.StaticFiles.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
@@ -39,17 +41,14 @@ app.MapGet("/", () => "Sample BadgerClan bot.  Modify the code in Program.cs to 
 
 app.MapPost("/", (GameState request) =>
 {
-    // ***************************************************************************
-    // ***************************************************************************
-    // **
+    var myMoves = SuperSimpleExampleBot.MakeMoves(request);//Very simple bot example.  Delete this line when you write your own bot.
     // ** Your code goes right here.
     // ** Look in the request object to see the game state.
     // ** Then add your moves to the myMoves list.
-    // **
-    // ***************************************************************************
-    // ***************************************************************************
-
-    var myMoves = SuperSimpleExampleBot.MakeMoves(request);//Very simple bot example.  Delete this line when you write your own bot.
+    foreach (Unit unit in request.Units)
+    {
+        //myMoves.Add(unit.Location);
+    }
 
     return new MoveResponse(myMoves);
 });
