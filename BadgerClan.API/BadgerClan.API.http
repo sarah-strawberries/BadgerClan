@@ -1,0 +1,5 @@
+﻿@BadgerClan.API_HostAddress = https://localhost:7057
+
+GET {{BadgerClan.API_HostAddress}}/MoveLeft
+
+###

@@ -11,7 +11,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // Endpoints for sending MoveRequests to BadgerClan
-app.MapGet("MoveLeft", () =>
+app.MapGet("/MoveLeft", () =>
 {
     return Results.Ok();
 });
