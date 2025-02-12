@@ -4,7 +4,7 @@ namespace BadgerClan.API.Bots;
 
 public class Bot
 {
-   public static List<Move> MakeMoves(GameState gameState)
+   public static List<Move> MakeMoves(GameState gameState, List<Move> customMoves)
     {
         var myTeamId = gameState.YourTeamId;
         var myUnits = findMyUnits(myTeamId, gameState.Units);
@@ -30,7 +30,15 @@ public class Bot
             }
             else
             {
-                moves.Add(new Move(MoveType.Walk, unit.Id, unit.Location.Toward(closestEnemy.Location)));
+                //unit.Location.Distance()
+                if (customMoves.Count > 0)
+                {
+                    moves.Add(customMoves[1]);
+                }
+                else
+                {
+                    moves.Add(new Move(MoveType.Walk, unit.Id, unit.Location.Toward(closestEnemy.Location)));
+                }
             }
         }
 
